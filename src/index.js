@@ -5,13 +5,14 @@ const SKETCH_TOOL = '/Applications/Sketch.app/Contents/Resources/sketchtool/bin/
 
 export default (
   {
+    render = true,
     bundle,
     command = 'main',
   } = {},
 ) => ({
   name: 'render',
   onwrite() {
-    if (process.env.RENDER === 'true' && bundle) {
+    if (render && bundle) {
       exec(`${SKETCH_TOOL} run ${bundle} ${command}`, (err, stdout) => {
         if (err) {
           throw err;
