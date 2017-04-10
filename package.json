@@ -1,0 +1,38 @@
+{
+  "name": "rollup-plugin-sketch-livereload",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "module": "lib/index.es6.js",
+  "repository": "http://github.com/jongold/rollup-plugin-sketch-livereload",
+  "author": "Jon Gold <hello@designedbygold.com> (http://jon.gold)",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "npm run build -- --watch",
+    "prepublishOnly": "rimraf lib && npm run build",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-eslint --write \"src/**/*.js\"",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-airbnb": "^2.2.3",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "lint-staged": "^3.4.0",
+    "pre-commit": "^1.2.2",
+    "prettier-eslint-cli": "^3.2.0",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1"
+  },
+  "dependencies": {
+    "babel-eslint": "^7.2.1"
+  }
+}
