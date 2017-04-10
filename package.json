@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-sketch-livereload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "module": "lib/index.es6.js",
   "repository": "http://github.com/jongold/rollup-plugin-sketch-livereload",
